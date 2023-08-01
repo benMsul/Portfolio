@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  background-image: linear-gradient(to right, 
+  #0d3de9, #2c36e0, #3a30d6,
+  #4529cd, #4c21c4, #5b1ec6,
+  #681bc8, #7516ca, #8e15d7,
+  #a813e4, #c10ef0, #db05fb);
+  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+}
+
+@keyframes photoGradientChange {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.photo {
+  background-image: linear-gradient(to right,
+  #0d3de9, #2c36e0, #3a30d6,
+  #4529cd, #4c21c4, #5b1ec6,
+  #681bc8, #7516ca, #8e15d7,
+  #a813e4, #c10ef0, #db05fb
+  );
+  background-size: 200% 200%;
+  animation: photoGradientChange 5s ease-in-out infinite;
+  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+}
+
+.shadow {
+  text-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+}
+
+.btn:hover {
+  background-image: linear-gradient(to left, 
+  #0d3de9, #2c36e0, #3a30d6,
+  #4529cd, #4c21c4, #5b1ec6,
+  #681bc8, #7516ca, #8e15d7,
+  #a813e4, #c10ef0, #db05fb);
+}
+
+.gradient,
+.active {
+  background-image: linear-gradient(to top, 
+  #0d3de9, #2c36e0, 
+  #5b1ec6, #db05fb);
+}
+
+.active {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+.image-size {
+  width: 400px;
+}
+
+.text-img {
+  font-size: 12px;
+}
+
+
+@layer base {
+  body {
+    @apply font-secondary text-lg leading-8 text-white;
+  }
+  .h2 {
+    @apply font-primary text-[32px] mb-6 tracking-[10%] uppercase;
+  }
+  .h3 {
+    @apply font-primary font-semibold text-[26px] mb-6 leading-[46px];
+  }
+  .btn {
+    @apply rounded-full font-primary text-white font-medium;
+  }
+  .btn-sm {
+    @apply h-[48px] px-6 text-sm;
+  }
+  .btn-lg {
+    @apply h-[56px] px-10 text-base;
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#0d3de9] to-[#db05fb] font-bold font-primary hover:from-[#db05fb] hover:to-[#0d3de9];
+  }
+  @keyframes gradientChange {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .job-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#0d3de9] to-[#fb05da];
+    background-size: 200% 200%;
+    animation: gradientChange 5s ease-in-out infinite;
+  }
+  .section {
+    @apply py-56 lg:py-72 lg:h-screen flex items-center;
+  }
+  
+
+}
