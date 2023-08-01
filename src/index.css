@@ -62,6 +62,10 @@
   font-size: 12px;
 }
 
+.bg-site {
+  background-image: url('./assets//site-bg.jpg');
+}
+
 
 @layer base {
   body {
