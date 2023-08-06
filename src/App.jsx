@@ -10,18 +10,15 @@ import { StarsCanvas } from './components/canvas';
 const App = () => {
   return (
     <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
+      <div className='relative z-0'>
+      <StarsCanvas />
       <Header />
       <Banner />
       <Nav />
       <About />
-      <div className='relative z-0'>
-        <Skills />
-        <StarsCanvas />
-      </div>
+      <Skills />
       <Work />
-      <div className='relative z-0'>
-        <Contact />
-        <StarsCanvas />
+      <Contact />
       </div>
       {<div className='h-[40px]'></div>}
     </div>

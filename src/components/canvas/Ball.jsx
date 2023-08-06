@@ -10,15 +10,18 @@ import {
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import { useRef } from "react";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
+  const meshRef = useRef();
+
 
   return (
     <Float speed={2.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={1.50}>
+      <mesh ref={meshRef} castShadow receiveShadow scale={1.50}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color='#fff8eb'
@@ -32,6 +35,8 @@ const Ball = (props) => {
           scale={1}
           map={decal}
           flatShading
+          attach='material'
+          ref={meshRef}
         />
       </mesh>
     </Float>

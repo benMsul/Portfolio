@@ -2,13 +2,14 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import CountUp from 'react-countup';
-import Tech from './Tech';
 import { Link } from 'react-scroll';
+import Tech from './Tech';
 
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.3,
   });
+
 
   return (
     <section className="section" id="about" ref={ref}>

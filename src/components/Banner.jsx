@@ -33,7 +33,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1] "
+              className="mb-6 mt-6 text-[20px] lg:text-[40px] font-secondary font-semibold uppercase leading-[1] "
             >
               <span className="mb-4">Je suis </span>
               <TypeAnimation
@@ -87,7 +87,6 @@ const Banner = () => {
               variants={fadeIn('up', 0.7)}
               initial="hidden"
               whileInView={'show'}
-              viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0 "
             >
               <a
@@ -113,10 +112,10 @@ const Banner = () => {
             variants={fadeIn('up', 0.9)}
             initial="hidden"
             whileInView={'show'}
-            className="flex justify-center mt-8 lg:mt-0 lg:flex-1 lg:max-w-[320px] lg:max-w-[482] "
+            className="flex justify-center mt-8 lg:mt-0 lg:flex-1 lg:max-w-[482] "
           >
             <img
-              className="photo rounded-full"
+              className="photo rounded-full w-[250px]"
               src={Image}
               alt=""
             />

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import emailsjs from '@emailjs/browser';
 
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -109,7 +110,7 @@ const Contact = () => {
             <motion.button
               type="submit"
               variants={fadeIn('up', 0.6)}
-              className="btn btn-lg text-black font-bold"
+              className="btn btn-lg bg-white text-black font-bold"
             >
               {loading ? 'Envoie en cours...' : 'Envoyer Message'}
             </motion.button>
